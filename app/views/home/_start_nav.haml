@@ -2,7 +2,7 @@
   %h3= t '.title'
   %ul.nav.nav-list
     %li.nav-header= t '.foodcoop'
-    - if !FoodsoftConfig[:disable_members_overview]
+    - unless FoodsoftConfig[:disable_members_overview]
       %li= link_to t('.members'), foodcoop_users_path
     %li= link_to t('.tasks'), user_tasks_path
 
